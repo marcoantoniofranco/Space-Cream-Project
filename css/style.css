@@ -79,13 +79,21 @@ body {
 }
 
 .wrapper-card-main {
+  /* object-fit: cover; */
   position: relative;
 }
 
 .wrapper-card-main span {
   position: absolute;
 
+  background-color: var(--bg-card);
   color: var(--fc-card);
 
   font-size: 2rem;
+  border-radius: 2rem;
+  right: 1.6rem;
+  top: 1.7rem;
+
+  padding: 0 2.2rem;
+  width: fit-content;
 }
