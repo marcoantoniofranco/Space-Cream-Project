@@ -16,6 +16,7 @@
   --fc-card: hsl(232 17% 35%);
 
   --bg-card: hsla(312 91% 96%);
+  --bg-color-span-hover: hsl(312 91% 96%);
 }
 
 html,
@@ -100,17 +101,23 @@ body {
   transition: all 300ms;
 
   width: 100%;
-
-  animation: downtop 700ms 350ms backwards;
 }
 
 .wrapper-card-main img {
   max-width: 100%;
   border-radius: 2rem;
+
+  animation-name: downtop;
+  animation-delay: 200ms;
+  animation-duration: 700ms;
+
+  transition-duration: 700ms;
 }
 
 .wrapper-card-main:hover {
-  transform: scale(1.05);
+  cursor: pointer;
+  transform: scale(1.1);
+  filter: blur(2px) saturate(50%);
   opacity: 0.7;
 }
 
@@ -128,7 +135,9 @@ body {
   padding: 0 2.2rem;
   width: fit-content;
 
-  animation: topdown 1000ms;
+  animation-name: topdown;
+  animation-delay: 200ms;
+  animation-duration: 700ms;
 }
 
 .cards {
@@ -147,7 +156,7 @@ footer {
 @keyframes downtop {
   0% {
     opacity: 0;
-    transform: translateY(-15px);
+    transform: translateY(+15px);
   }
 
   100% {
@@ -159,7 +168,7 @@ footer {
 @keyframes topdown {
   0% {
     opacity: 0;
-    transform: translateY(+15px);
+    transform: translateY(-15px);
   }
 
   100% {
